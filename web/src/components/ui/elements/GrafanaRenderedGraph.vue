@@ -69,7 +69,7 @@ export default {
         },
         getImageURL: function() {
             const now = new Date().getTime()
-            const baseurl = typeof window !== 'undefined' ? window.location.origin || 'http://127.0.0.1:5001';
+            const baseurl = window?.location?.origin || 'http://127.0.0.1:5001';
             return `${baseUrl}/servers/monitoringImage/${this.server.id}/${this.panelId}/${this.getFromDate}?ts=${now}`
         },
         isImageLoaded: function() {
